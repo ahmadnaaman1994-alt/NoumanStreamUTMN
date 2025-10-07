@@ -1,19 +1,3 @@
-#import streamlit as st
-#import pandas as pd
-#import numpy as np
-
-
-#titanic = pd.read_csv('https://huggingface.co/datasets/ankislyakov/titanic/resolve/main/titanic_train.csv', index_col='PassengerId')
-
-#survived_by_sex = titanic.groupby('Sex')['Survived'].value_counts(normalize=True).unstack() * 100
-#count_by_sex = titanic.groupby('Sex')['Survived'].value_counts().unstack()
-
-#st.write("Количество и процент выживших и погибших по полу:")
-#st.write(count_by_sex)
-
-#st.write("\nПроцент:")
-#st.dataframe(survived_by_sex)
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -67,5 +51,6 @@ else:
     })
 
 st.table(results_df)
+
 
 st.info(f"Проанализированы данные {total_count} пассажиров")
